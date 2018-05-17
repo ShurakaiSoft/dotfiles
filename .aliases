@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"  # just typing `cd` is probably going to be faster
+alias -- -="cd -"
+
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias dp="cd ~/projects"
+alias g="git"
+
+
+# List all files in colourised in long format
+alias ll="ls -lF"
+
+# List all fines colourised in long format, including dot files
+alias la="ls -laF"
+
+# List only directories
+alias lld="ls -dalF */"
+
+# List only directories, including hidden ones
+alias lad="ls -dalF .*/ */"
+
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Volume Stuff - because you can...
+alias stfu="osascript -e 'set volume output muted true'"
+alias pumpitup="osascript -e 'set volume output volume 100'"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+#Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'

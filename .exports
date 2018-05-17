@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Make vim the default editor.
+export EDITOR='vim';
+
+# Prefer Australian English and use UTF-8.
+export LANG='en_AU.UTF-8';
+export LC_ALL='en_AU.UTF-8';
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+
+# Don't clear the screen after quitting a manual page.
+export MANPAGER='less -X';
+
+# Colour the output of ls
+export CLICOLOR='1'
+export LSCOLORS='ExFxBxDxCxegedabagaced'
+
+# help applications find Java
+export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
