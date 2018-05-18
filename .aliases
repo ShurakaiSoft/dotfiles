@@ -15,19 +15,28 @@ alias dt="cd ~/Desktop"
 alias dp="cd ~/projects"
 alias g="git"
 
+# Detect which `ls` flavour is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+  colorflag="--color"
+else # MacOS `ls`
+  colorflag="-G"
+  export LSCOLORS='ExFxBxDxCxegedabagaced'
+fi
 
 # List all files in colourised in long format
-alias ll="ls -lF"
+alias ll="ls -lF ${colorflag}"
 
 # List all fines colourised in long format, including dot files
-alias la="ls -laF"
+alias la="ls -laF ${colorflag}"
 
 # List only directories
-alias lld="ls -dalF */"
+alias lld="ls -dalF ${colorflag} */"
 
 # List only directories, including hidden ones
-alias lad="ls -dalF .*/ */"
+alias lad="ls -dalF ${colorflag} .*/ */"
 
+# Always use color output for `ls`
+alias ls="ls ${colorflag}"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"

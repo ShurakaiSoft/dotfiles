@@ -13,10 +13,6 @@ export LESS_TERMCAP_md="${yellow}";
 # Don't clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
-# Colour the output of ls
-export CLICOLOR='1'
-export LSCOLORS='ExFxBxDxCxegedabagaced'
-
 # help applications find Java
 export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 
